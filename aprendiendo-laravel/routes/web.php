@@ -28,6 +28,12 @@ Route::post('/recibir', 'PeliculaController@recibir');
 
 Route::group(['prefix' => 'frutas'], function (){
     Route::get('index','frutaController@index');
+    Route::get('detalle/{id}','frutaController@detalle');
+    Route::get('crear','frutaController@crear');
+    Route::post('save','frutaController@save');
+     Route::get('delete/{id}','frutaController@delete');
+     Route::get('edit/{id}','frutaController@edit');
+     Route::post('update','frutaController@update');
 });     
 
 
